@@ -1,6 +1,6 @@
 .wrapper {
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
   }
