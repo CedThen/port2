@@ -1,5 +1,5 @@
 import './app.css'
-import { data, graphics, AboutMeContent } from './Data'
+import { data } from './Data'
 import ProjectCard from './components/ProjectCard';
 import React, { useRef } from 'react';
 import Header from './components/Header';
@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className='root' >
-      {/* <div ref={homeRef} className='h-1'></div> */}
       <NavBar refs={{ projRef, aboutRef, }} />
       <div className="wrapper" id='wrapper'>
         <Header />
@@ -35,8 +34,8 @@ function App() {
                 About Me
               </div>
               <div className='flex justify-center items-center flex-col pb-40'>
-                <div className='w-[300px] h-[300px] flex justify-center items-center '>
-                  <img src={profPic} alt='' className=' w-full h-auto border' style={{ borderRadius: '60%' }} />
+                <div className='w-[300px] h-[300px]'>
+                  <img src={profPic} alt='' className=' w-full h-auto border block' style={{ borderRadius: '50%' }} />
                 </div>
                 <br />
                 <p className='text-xl md:text-2xl'>Hi! Welcome to my portfolio.</p>
