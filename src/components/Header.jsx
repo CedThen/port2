@@ -12,7 +12,7 @@ const bgfgStyle = {
 }
 
 function Header() {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [offsetX, setOffsetX] = useState(0);
 
   function trackMouse(e) {
@@ -24,14 +24,14 @@ function Header() {
     <header onMouseMove={trackMouse}>
       <img src={foreground}
         className="foreground" alt=''
-        style={{ transform: `translateZ(-5px) rotateY(${offsetX}deg) scale(1.6)`, ...bgfgStyle }}
+        style={{ transform: `translateZ(-5px)  rotateY(${offsetX}deg) scale(1.6)`, ...bgfgStyle }}
       />
       <img src={background}
         className="background" alt=''
-        style={{ transform: 'translateZ(-10px)  scale(2)', ...bgfgStyle }}
+        style={{ transform: `translateZ(-10px) scale(2)`, ...bgfgStyle }}
       />
       <div className='titleContainer flex justify-center items-center mb-60 flex-col'
-        style={{ transform: `rotateY(${offsetX * 10}deg)` }}>
+        style={{ transform: `rotateY(${offsetX * 20}deg)` }}>
         <h1 className='text-titleBlue italic  text-7xl md:text-8xl font-bold'>Ted Chen</h1>
         <p className='text-titleBlue italic text-3xl md:text-4xl font-bold pt-4'>web developer</p>
 

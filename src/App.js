@@ -25,6 +25,7 @@ function App() {
             <div className='text-7xl text-titleBlue text-center font-bold italic py-10 pt-20' ref={projRef}>
               Projects
             </div>
+
             <div className='w-full md:w-3/4 mx-auto'>
               {data.map((item, index) => <ProjectCard item={item} key={index} />)}
             </div>
